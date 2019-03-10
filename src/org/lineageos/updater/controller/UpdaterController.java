@@ -355,6 +355,7 @@ public class UpdaterController {
             Log.d(TAG, "Changing name with " + destination.getName());
         }
         update.setFile(destination);
+        Log.d(TAG, "setting dest file path: "+destination);
         DownloadClient downloadClient;
         try {
             downloadClient = new DownloadClient.Builder()
@@ -364,6 +365,7 @@ public class UpdaterController {
                     .setProgressListener(getProgressListener(downloadId))
                     .setUseDuplicateLinks(true)
                     .build();
+        Log.d(TAG, "ROM-download URL: " + update.getDownloadUrl());
         } catch (IOException exception) {
             Log.e(TAG, "Could not build download client");
             update.setStatus(UpdateStatus.PAUSED_ERROR);
