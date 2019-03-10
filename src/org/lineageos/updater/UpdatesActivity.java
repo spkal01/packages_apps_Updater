@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.SystemProperties;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.Snackbar;
@@ -50,6 +51,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import org.json.JSONException;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.lineageos.updater.controller.UpdaterController;
 import org.lineageos.updater.controller.UpdaterService;
 import org.lineageos.updater.download.DownloadClient;
@@ -58,8 +61,13 @@ import org.lineageos.updater.misc.Constants;
 import org.lineageos.updater.misc.StringGenerator;
 import org.lineageos.updater.misc.Utils;
 import org.lineageos.updater.model.UpdateInfo;
+import org.lineageos.updater.R;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -286,6 +294,62 @@ public class UpdatesActivity extends UpdatesListActivity {
         }
     }
 
+    private void convertBackendResponse(File json){
+        String backendDate = null;
+        String backendUTS = null;
+        String backendAICPVersion = null;
+        String backendSize = null;
+        String backendMd5 = null;
+        String device = SystemProperties.get(Constants.PROP_DEVICE);
+        String releasetype = SystemProperties.get(Constants.PROP_RELEASE_TYPE);
+        String romversion = SystemProperties.get(Constants.PROP_BUILD_VERSION);
+            try (BufferedReader reader = new BufferedReader(new FileReader((json)))) {
+                String line = reader.readLine();
+
+                final String[] pair = line.split(" ");
+                backendDate = pair[0];
+                backendUTS = pair[1];
+                backendAICPVersion = pair[2];
+                backendSize = pair[4];
+                backendMd5 = pair[5];
+
+            }catch (IOException uex) {
+                Log.e(TAG, "could not read file: " +json);
+            }catch (NullPointerException npe) {
+                Log.e(TAG,"response of backend returned a empty set");
+                return;
+            }
+
+        String message;
+        JSONObject jsonObj = new JSONObject();
+        JSONArray Jarray = new JSONArray();
+        JSONObject Jitem = new JSONObject();
+        String downloadUrl = null;
+        downloadUrl = getString(R.string.updater_download_server_base_url)+"device/"+device+"/"+releasetype+"/aicp_"+device+"_"+backendAICPVersion+"-"+releasetype+"-"+backendDate+".zip";
+        try {
+            Jitem.put("datetime", backendUTS);
+            Jitem.put("filename", "aicp_"+device+"_"+backendAICPVersion+"-"+releasetype+"-"+backendDate+".zip");
+            Jitem.put("id", backendMd5);
+            Jitem.put("romtype", releasetype);
+            Jitem.put("size", backendSize);
+            Jitem.put("url", downloadUrl);
+            Jitem.put("version", romversion);
+            Jarray.put(Jitem);
+            jsonObj.put("response", Jarray);
+        }catch (JSONException exception) {
+            Log.e(TAG, "could not create JSON object");
+        }
+
+        //Log.d(TAG, "JSON Object: " + jsonObj);
+        //Log.d(TAG, "writing JSON Object to file: " + json);
+        try (FileWriter file = new FileWriter(json)) {
+            file.write(jsonObj.toString());
+        } catch (IOException ex) {
+            Log.e(TAG, "could not write JSON-object to file: "+jsonObj);
+        }
+
+    }
+
     private void processNewJson(File json, File jsonNew, boolean manualRefresh) {
         try {
             loadUpdatesList(jsonNew, manualRefresh);
@@ -333,6 +397,7 @@ public class UpdatesActivity extends UpdatesListActivity {
             public void onSuccess(File destination) {
                 runOnUiThread(() -> {
                     Log.d(TAG, "List downloaded");
+                    convertBackendResponse(jsonFileTmp);
                     processNewJson(jsonFile, jsonFileTmp, manualRefresh);
                     refreshAnimationStop();
                 });
