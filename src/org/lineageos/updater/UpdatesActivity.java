@@ -76,6 +76,7 @@ import java.util.UUID;
 public class UpdatesActivity extends UpdatesListActivity {
 
     private static final String TAG = "UpdatesActivity";
+    private static final boolean DEBUG = false;
     private UpdaterService mUpdaterService;
     private BroadcastReceiver mBroadcastReceiver;
 
@@ -239,7 +240,7 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     private void loadUpdatesList(File jsonFile, boolean manualRefresh)
             throws IOException, JSONException {
-        Log.d(TAG, "Adding remote updates");
+        if (DEBUG) Log.d(TAG, "Adding remote updates");
         UpdaterController controller = mUpdaterService.getUpdaterController();
         boolean newUpdates = false;
 
@@ -307,9 +308,9 @@ public class UpdatesActivity extends UpdatesListActivity {
                 backendSize = pair[4];
                 backendMd5 = pair[5];
 
-            }catch (IOException uex) {
+            } catch (IOException uex) {
                 Log.e(TAG, "could not read file: " +json);
-            }catch (NullPointerException npe) {
+            } catch (NullPointerException npe) {
                 Log.e(TAG,"response of backend returned a empty set");
                 return;
             }
@@ -330,12 +331,12 @@ public class UpdatesActivity extends UpdatesListActivity {
             Jitem.put("version", romversion);
             Jarray.put(Jitem);
             jsonObj.put("response", Jarray);
-        }catch (JSONException exception) {
+        } catch (JSONException exception) {
             Log.e(TAG, "could not create JSON object");
         }
 
-        //Log.d(TAG, "JSON Object: " + jsonObj);
-        //Log.d(TAG, "writing JSON Object to file: " + json);
+        if (DEBUG) Log.d(TAG, "JSON Object: " + jsonObj);
+        if (DEBUG) Log.d(TAG, "writing JSON Object to file: " + json);
         try (FileWriter file = new FileWriter(json)) {
             file.write(jsonObj.toString());
         } catch (IOException ex) {
@@ -360,7 +361,7 @@ public class UpdatesActivity extends UpdatesListActivity {
             jsonNew.renameTo(json);
         } catch (IOException | JSONException e) {
             Log.e(TAG, "Could not read json", e);
-            showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
+//            showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
         }
     }
 
@@ -368,7 +369,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         final File jsonFile = Utils.getCachedUpdateList(this);
         final File jsonFileTmp = new File(jsonFile.getAbsolutePath() + UUID.randomUUID());
         String url = Utils.getServerURL(this);
-        Log.d(TAG, "Checking " + url);
+        if (DEBUG) Log.d(TAG, "Checking " + url);
 
         DownloadClient.DownloadCallback callback = new DownloadClient.DownloadCallback() {
             @Override
