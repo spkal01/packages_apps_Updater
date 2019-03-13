@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
@@ -489,6 +490,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         popupMenu.inflate(R.menu.menu_action_mode);
 
         MenuBuilder menu = (MenuBuilder) popupMenu.getMenu();
+        menu.findItem(R.id.menu_show_changelog).setVisible(update.getAvailableOnline());
         menu.findItem(R.id.menu_delete_action).setVisible(canDelete);
         menu.findItem(R.id.menu_copy_url).setVisible(update.getAvailableOnline());
         menu.findItem(R.id.menu_export_update).setVisible(
@@ -496,6 +498,11 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
+                case R.id.menu_show_changelog:
+                    Intent openUrl = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(update.getDownloadUrl() + ".html"));
+                    mActivity.startActivity(openUrl);
+                    return true;
                 case R.id.menu_delete_action:
                     getDeleteDialog(update.getDownloadId()).show();
                     return true;
