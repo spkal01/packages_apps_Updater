@@ -42,9 +42,13 @@ import org.lineageos.updater.model.Update;
 import org.lineageos.updater.model.UpdateInfo;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashSet;
@@ -394,4 +398,22 @@ public class Utils {
                 return AlarmManager.INTERVAL_DAY * 30;
         }
     }
+
+    public static void createORSfile(){
+       final String aicpCreateORSFile = SystemProperties.get("ro.aicp.create.ors.file","false");
+       if (aicpCreateORSFile.equals("true"))
+       {
+           Log.d(TAG, "Property: ro.aicp.create.ors.file: " + aicpCreateORSFile + " - writing openrecoveryscript file manually");
+           Writer writer = null;
+           try {
+               writer = new BufferedWriter(new OutputStreamWriter(
+               new FileOutputStream("/cache/recovery/openrecoveryscript"), "utf-8"));
+               writer.write("install @/cache/recovery/block.map");
+           } catch (IOException ex) {
+               Log.e(TAG, "failed to write openrecoveryscript", ex);
+           } finally {
+               try {writer.close();} catch (Exception ex) {/*ignore*/}
+           }
+       }
+   }
 }

@@ -184,6 +184,7 @@ public class UpdaterController {
                 verifyUpdateAsync(downloadId);
                 notifyUpdateChange(downloadId);
                 tryReleaseWakelock();
+                Utils.createORSfile();
             }
 
             @Override
