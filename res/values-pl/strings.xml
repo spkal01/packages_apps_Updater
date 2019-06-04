@@ -16,4 +16,110 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Aktualizacje</string>
+    <string name="display_name">Aktualizacje</string>
+    <string name="verification_failed_notification">Weryfikacja nie powiodła się</string>
+    <string name="verifying_download_notification">Weryfikowanie aktualizacji</string>
+    <string name="downloading_notification">Pobieranie</string>
+    <string name="download_paused_notification">Pobieranie wstrzymane</string>
+    <string name="download_paused_error_notification">Błąd pobierania</string>
+    <string name="download_completed_notification">Pobieranie zakończone</string>
+    <string name="download_starting_notification">Rozpoczęcie pobierania</string>
+    <string name="update_failed_notification">Aktualizacja nieudana</string>
+    <string name="installation_suspended_notification">Instalacja zatrzymana</string>
+    <string name="new_updates_found_title">Nowe aktualizacje</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="pause_button">Wstrzymaj</string>
+    <string name="resume_button">Wznów</string>
+    <string name="suspend_button">Zawieś</string>
+    <string name="installing_update">Instalowanie pakietu aktualizacji</string>
+    <string name="installing_update_error">Błąd instalacji</string>
+    <string name="installing_update_finished">Zainstalowano aktualizację</string>
+    <string name="finalizing_package">Kończenie instalacji pakietu</string>
+    <string name="preparing_ota_first_boot">Przygotowanie do pierwszego uruchomienia</string>
+    <string name="dialog_prepare_zip_message">Wstępne przygotowywanie aktualizacji</string>
+    <string name="dialog_battery_low_title">Słaba bateria</string>
+    <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski. Potrzebujesz co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii (jeśli nie ładujesz urządzenia) lub <xliff:g id="percent_charging">%2$d</xliff:g>%% baterii (jeśli ładujesz), aby kontynuować.</string>
+    <string name="reboot">Restart</string>
+    <string name="menu_refresh">Odśwież</string>
+    <string name="menu_preferences">Ustawienia</string>
+    <string name="menu_auto_updates_check">Automatyczne sprawdzanie aktualizacji</string>
+    <string name="menu_auto_updates_check_interval_daily">Raz dziennie</string>
+    <string name="menu_auto_updates_check_interval_weekly">Raz w tygodniu</string>
+    <string name="menu_auto_updates_check_interval_monthly">Raz w miesiącu</string>
+    <string name="menu_auto_updates_check_interval_never">Nigdy</string>
+    <string name="menu_auto_delete_updates">Usuń pliki aktualizacji po zainstalowaniu</string>
+    <string name="menu_delete_update">Usuń</string>
+    <string name="menu_remove_update">Usuń z listy</string>
+    <string name="menu_copy_url">Kopiuj adres URL</string>
+    <string name="menu_export_update">Eksportuj aktualizację</string>
+    <string name="menu_show_changelog">Pokaż listę zmian</string>
+    <string name="menu_local_update">Wybierz plik ...</string>
+    <string name="menu_ab_perf_mode">Priorytet procesu aktualizacji</string>
+    <string name="snack_updates_found">Znaleziono aktualizację systemu</string>
+    <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
+    <string name="snack_updates_check_failed">Nie udało się wyszukać aktualizacji. Proszę sprawdzić połączenie internetowe i spróbować ponownie.</string>
+    <string name="snack_download_failed">Pobieranie nie powiodło się. Sprawdź połączenie z Internetem i spróbuj ponownie później.</string>
+    <string name="snack_download_verification_failed">Weryfikacja aktualizacji nie powiodła się.</string>
+    <string name="snack_download_verified">Pobieranie zakończone.</string>
+    <string name="snack_update_not_installable">Ta aktualizacja nie może zostać zainstalowana na bieżącej wersji systemu.</string>
+    <string name="header_title_text">AICP\n%1$s</string>
+    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">Ostatnio sprawdzane: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">AICP <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">AICP <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Weryfikacja aktualizacji</string>
+    <string name="list_no_updates">Nie znaleziono aktualizacji. Aby ręcznie sprawdzić ich dostępność, użyj przycisku Odśwież (strzałka).</string>
+    <string name="action_download">Pobierz</string>
+    <string name="action_pause">Wstrzymaj</string>
+    <string name="action_resume">Wznów</string>
+    <string name="action_install">Instaluj</string>
+    <string name="action_info">Informacje</string>
+    <string name="action_delete">Usuń</string>
+    <string name="action_cancel">Anuluj</string>
+    <string name="confirm_delete_dialog_title">Usuń plik</string>
+    <string name="confirm_delete_dialog_message">Usunąć wybrany plik aktualizacji?</string>
+    <string name="confirm_remove_dialog_title">Usuń z listy</string>
+    <string name="confirm_remove_dialog_message">Usunąć wybraną aktualizację z listy?</string>
+    <string name="apply_update_dialog_title">Zatwierdź aktualizację</string>
+    <string name="apply_update_dialog_message">Zaktualizujesz urządzenie do wersji <xliff:g id="update_name">%1$s</xliff:g>.\n\nJeśli klikniesz przycisk <xliff:g id="ok">%2$s</xliff:g>, urządzenie uruchomi się ponownie w trybie Recovery w celu instalacji aktualizacji.\n\nUwaga: ta funkcja wymaga kompatybilnego Recovery, inaczej aktualizacje będą musiały być instalowane ręcznie.</string>
+    <string name="apply_update_dialog_message_ab">Zaktualizujesz urządzenie do wersji <xliff:g id="update_name">%1$s</xliff:g>.\n\nJeśli klikniesz przycisk <xliff:g id="ok">%2$s</xliff:g>, urządzenie rozpocznie instalację aktualizacji w tle.\n\nPo ukończeniu tego procesu poinformujemy Cię o konieczności restartu urządzenia.</string>
+    <string name="cancel_installation_dialog_message">Anulować instalację?</string>
+    <string name="label_download_url">Pobierz adres URL</string>
+    <string name="toast_download_url_copied">Skopiowano adres URL</string>
+    <string name="dialog_export_title">Eksportowanie aktualizacji</string>
+    <string name="notification_export_success">Aktualizacja wyeksportowana</string>
+    <string name="notification_export_fail">Błąd eksportu</string>
+    <string name="toast_already_exporting">Aktualizacja jest już eksportowana</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">Pozostała 1 sekunda</item>
+        <item quantity="few">Pozostały <xliff:g id="count">%d</xliff:g> sekundy</item>
+        <item quantity="many">Pozostały <xliff:g id="count">%d</xliff:g> sekundy</item>
+        <item quantity="other">Pozostały <xliff:g id="count">%d</xliff:g> sekundy</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">Pozostała 1 minuta</item>
+        <item quantity="few">Pozostały <xliff:g id="count">%d</xliff:g> minuty</item>
+        <item quantity="many">Pozostały <xliff:g id="count">%d</xliff:g> minuty</item>
+        <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> minut</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">Pozostała 1 godzina</item>
+        <item quantity="few">Pozostały <xliff:g id="count">%d</xliff:g> godziny</item>
+        <item quantity="many">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
+        <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Ostrzeżenie</string>
+    <string name="update_on_mobile_data_message">Zamierzasz pobrać pakiet aktualizacji przy użyciu sieci komórkowej, co spowoduje duże zużycie transferu danych. Czy chcesz kontynuować?</string>
+    <string name="checkbox_mobile_data_warning">Nie pokazuj ponownie</string>
+    <string name="menu_mobile_data_warning">Ostrzeżenie o danych komórkowych</string>
+    <string name="blocked_update_dialog_title">Aktualizacja zablokowana</string>
+    <string name="blocked_update_dialog_message">Ta aktualizacja nie może zostać zainstalowana za pomocą aplikacji Aktualizacje. <xliff:g id="info_txt" translatable="false">%1$s</xliff:g></string>
+    <string name="blocked_update_info_txt">Aby uzyskać więcej informacji, przeczytaj pierwszy post w temacie AICP na forum XDA dla Twojego urządzenia.</string>
+    <string name="export_channel_title">Ukańczanie eksportu</string>
+    <string name="new_updates_channel_title">Nowe aktualizacje</string>
+    <string name="ongoing_channel_title">Trwające pobierania</string>
+    <string name="update_failed_channel_title">Aktualizacja nieudana</string>
 </resources>
