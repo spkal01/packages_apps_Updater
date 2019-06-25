@@ -71,6 +71,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> dari <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> dari <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> lagi) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Memverifikasi pembaruan</string>
+    <string name="list_no_updates">Tidak ada pembaruan baru yang ditemukan. Untuk memeriksa pembaruan baru secara manual, gunakan tombol Segarkan (panah melingkar).</string>
     <string name="action_download">Unduh</string>
     <string name="action_pause">Jeda</string>
     <string name="action_resume">Lanjutkan</string>
@@ -107,6 +108,7 @@
     <string name="menu_mobile_data_warning">Peringatan data seluler</string>
     <string name="blocked_update_dialog_title">Pembaruan diblokir</string>
     <string name="blocked_update_dialog_message">Pembaruan ini tidak dapat dipasang menggunakan aplikasi pembaruan. <xliff:g id="info_txt" translatable="false">%1$s</xliff:g></string>
+    <string name="blocked_update_info_txt">Silakan baca Kiriman Awal di thread XDA perangkat Anda untuk informasi lebih lanjut.</string>
     <string name="export_channel_title">Ekspor selesai</string>
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="ongoing_channel_title">Pengunduhan sedang berlangsung</string>
