@@ -37,8 +37,8 @@ import org.json.JSONObject;
 import com.aicp.updater3.R;
 import org.lineageos.updater.UpdatesDbHelper;
 import org.lineageos.updater.controller.UpdaterService;
-import org.lineageos.updater.model.UpdateBaseInfo;
 import org.lineageos.updater.model.Update;
+import org.lineageos.updater.model.UpdateBaseInfo;
 import org.lineageos.updater.model.UpdateInfo;
 import org.lineageos.updater.model.UpdateStatus;
 
