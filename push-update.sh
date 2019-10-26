@@ -1,6 +1,6 @@
 #!/bin/sh
 
-updates_dir=/data/ota_package
+updates_dir=/data/aicp_updates
 
 if [ ! -f "$1" ]; then
    echo "Usage: $0 ZIP [UNVERIFIED]"
