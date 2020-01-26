@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@*android:string/config_bodyFontFamily"
                     android:paddingBottom="16dp"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="?android:attr/colorAccent"
                     android:textSize="48sp" />
 
                 <TextView
