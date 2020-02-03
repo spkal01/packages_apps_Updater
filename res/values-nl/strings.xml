@@ -116,4 +116,7 @@
     <string name="new_updates_channel_title">Nieuwe updates</string>
     <string name="ongoing_channel_title">Huidige downloads</string>
     <string name="update_failed_channel_title">Update mislukt</string>
+    <string name="dialog_permissions_title">Rechten</string>
+    <string name="dialog_permissions_dismiss">Negeren</string>
+    <string name="dialog_permissions_ask">Opnieuw vragen</string>
 </resources>

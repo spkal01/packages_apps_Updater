@@ -117,4 +117,7 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="new_updates_channel_title">Új frissítések</string>
     <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
     <string name="update_failed_channel_title">A frissítés sikertelen</string>
+    <string name="dialog_permissions_title">Jogosultságok</string>
+    <string name="dialog_permissions_dismiss">Elutasítás</string>
+    <string name="dialog_permissions_ask">Kérdezze meg újra</string>
 </resources>

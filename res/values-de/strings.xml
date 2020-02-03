@@ -116,4 +116,7 @@
     <string name="new_updates_channel_title">Neue Aktualisierungen</string>
     <string name="ongoing_channel_title">Laufende Ladevorgänge</string>
     <string name="update_failed_channel_title">Aktualisierung fehlgeschlagen</string>
+    <string name="dialog_permissions_title">Berechtigungen</string>
+    <string name="dialog_permissions_dismiss">Verwerfen</string>
+    <string name="dialog_permissions_ask">Erneut fragen</string>
 </resources>

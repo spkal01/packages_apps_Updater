@@ -116,4 +116,7 @@
     <string name="new_updates_channel_title">Nuevas actualizaciones</string>
     <string name="ongoing_channel_title">Descargas en curso</string>
     <string name="update_failed_channel_title">Error en la actualización</string>
+    <string name="dialog_permissions_title">Permisos</string>
+    <string name="dialog_permissions_dismiss">Descartar</string>
+    <string name="dialog_permissions_ask">Preguntar de nuevo</string>
 </resources>

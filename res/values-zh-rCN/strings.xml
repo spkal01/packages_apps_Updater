@@ -113,4 +113,7 @@
     <string name="new_updates_channel_title">新的更新</string>
     <string name="ongoing_channel_title">正在下载</string>
     <string name="update_failed_channel_title">更新失败</string>
+    <string name="dialog_permissions_title">权限</string>
+    <string name="dialog_permissions_dismiss">取消</string>
+    <string name="dialog_permissions_ask">再次询问</string>
 </resources>
