@@ -131,11 +131,11 @@ public class FileUtils {
 
                 DocumentFile fileD = DocumentFile.fromSingleUri(context, uri);
 
-                Log.d(TAG, "" + fileD.getName());
-                Log.d(TAG, "" + fileD.getType());
+                if (DEBUG) Log.d(TAG, "" + fileD.getName());
+                if (DEBUG) Log.d(TAG, "" + fileD.getType());
 
                 final String id = DocumentsContract.getDocumentId(uri);
-
+                if (DEBUG) Log.d(TAG, "id = " + id);
                 if (id != null && id.startsWith("raw:")) {
                     return id.substring(4);
                 }
@@ -208,6 +208,8 @@ public class FileUtils {
     }
 
     public static boolean isExternalStorageDocument(Uri uri) {
+        if (DEBUG)  Log.d(TAG, "isExternalStorageDocument.getAuthority - " + uri.getAuthority());
+        if (DEBUG) Log.d(TAG, "isExternalStorageDocument - " + "com.android.externalstorage.documents".equals(uri.getAuthority()));
         return "com.android.externalstorage.documents".equals(uri.getAuthority());
     }
 
@@ -220,6 +222,8 @@ public class FileUtils {
     }
 
     public static boolean isDownloadsDocument(Uri uri) {
+        if (DEBUG) Log.d(TAG, "isDownloadsDocument.getAuthority - " + uri.getAuthority());
+        if (DEBUG) Log.d(TAG, "isDownloadsDocument - " + "com.android.providers.downloads.documents".equals(uri.getAuthority()));
         return "com.android.providers.downloads.documents".equals(uri.getAuthority());
     }
 

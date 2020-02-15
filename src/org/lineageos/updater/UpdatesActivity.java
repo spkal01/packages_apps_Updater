@@ -241,12 +241,13 @@ public class UpdatesActivity extends UpdatesListActivity {
                 return true;
             }
             case R.id.menu_local_update: {
-                boolean hasPermission = PermissionsUtils.checkAndRequestPermissions(
+/*                boolean hasPermission = PermissionsUtils.checkAndRequestPermissions(
                       this, REQUIRED_STORAGE_PERMISSIONS,
                       STORAGE_PERMISSIONS_REQUEST_CODE);
                 if (hasPermission) {
                   performFileSearch();
-                }
+                }*/
+                performFileSearch();
                 return true;
             }
         }
@@ -495,9 +496,9 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void performFileSearch() {
-        if (checkStoragePermissions()) {
+/*        if (checkStoragePermissions()) {
             return;
-        }
+        }*/
         Intent chooseFile;
         Intent intent;
         chooseFile = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -567,6 +568,7 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     private void addLocalUpdateInfo(Uri uri) {
         String path = FileUtils.getRealPath(this, uri);
+        Log.d(TAG, "File path " + path);
         Update localUpdate = new Update();
         File file = new File(path);
         localUpdate.setFile(file);
