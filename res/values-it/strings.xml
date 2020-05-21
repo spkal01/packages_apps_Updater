@@ -54,7 +54,6 @@
     <string name="menu_export_update">Esporta l\'aggiornamento</string>
     <string name="menu_show_changelog">Visualizza le modifiche</string>
     <string name="menu_local_update">Scegli file...</string>
-    <string name="menu_ab_perf_mode">Aggiornamento con priorità</string>
     <string name="snack_updates_found">Nuovi aggiornamenti trovati</string>
     <string name="snack_no_updates_found">Nessun nuovo aggiornamento trovato</string>
     <string name="snack_updates_check_failed">La verifica degli aggiornamenti è fallita. Controlla la tua connessione ad internet e riprova più tardi.</string>

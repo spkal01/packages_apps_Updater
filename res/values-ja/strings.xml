@@ -54,7 +54,6 @@
     <string name="menu_export_update">更新のエクスポート</string>
     <string name="menu_show_changelog">更新履歴を表示</string>
     <string name="menu_local_update">ファイルを選択...</string>
-    <string name="menu_ab_perf_mode">更新プロセスを優先する</string>
     <string name="snack_updates_found">更新が見つかりました</string>
     <string name="snack_no_updates_found">新しい更新はありません</string>
     <string name="snack_updates_check_failed">更新を確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>

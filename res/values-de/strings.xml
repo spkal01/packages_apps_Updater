@@ -54,7 +54,6 @@
     <string name="menu_export_update">Aktualisierung exportieren</string>
     <string name="menu_show_changelog">Änderungsprotokoll anzeigen</string>
     <string name="menu_local_update">Datei auswählen ...</string>
-    <string name="menu_ab_perf_mode">Aktualisierungsprozess priorisieren</string>
     <string name="snack_updates_found">Aktualisierungen gefunden</string>
     <string name="snack_no_updates_found">Keine neuen Aktualisierungen gefunden</string>
     <string name="snack_updates_check_failed">Die Suche nach Aktualisierungen schlug fehl. Bitte überprüfen Sie die Internetverbindung und versuchen es später erneut.</string>

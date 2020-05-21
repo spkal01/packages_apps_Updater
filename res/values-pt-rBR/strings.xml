@@ -54,7 +54,6 @@
     <string name="menu_export_update">Exportar atualização</string>
     <string name="menu_show_changelog">Exibir mudanças</string>
     <string name="menu_local_update">Escolher arquivo...</string>
-    <string name="menu_ab_perf_mode">Priorizar o processo de atualização</string>
     <string name="snack_updates_found">Nenhuma atualização encontrada</string>
     <string name="snack_no_updates_found">Nenhuma atualização foi encontrada</string>
     <string name="snack_updates_check_failed">Falha ao procurar por atualizações. Verifique sua conexão com a internet e tente novamente mais tarde.</string>

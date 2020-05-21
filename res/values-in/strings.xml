@@ -54,7 +54,6 @@
     <string name="menu_export_update">Ekspor pembaruan</string>
     <string name="menu_show_changelog">Tampilkan catatan perubahan</string>
     <string name="menu_local_update">Pilih file ...</string>
-    <string name="menu_ab_perf_mode">Prioritaskan proses pembaruan</string>
     <string name="snack_updates_found">Pembaruan baru ditemukan</string>
     <string name="snack_no_updates_found">Tidak ada pembaruan baru yang ditemukan</string>
     <string name="snack_updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi internet Anda dan coba lagi nanti.</string>
@@ -112,4 +111,7 @@
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="ongoing_channel_title">Pengunduhan sedang berlangsung</string>
     <string name="update_failed_channel_title">Pembaruan gagal</string>
+    <string name="dialog_permissions_title">Izin</string>
+    <string name="dialog_permissions_dismiss">Abaikan</string>
+    <string name="dialog_permissions_ask">Tanya lagi</string>
 </resources>
