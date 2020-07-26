@@ -15,6 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">نوێگەر</string>
+    <string name="display_name">نوێگەر</string>
     <!-- Directory where the update files will be downloaded and stored.
          WARNING: The application can and will delete any unknown file. -->
     <!-- Directory where the downloads will be exported to.
@@ -24,6 +26,103 @@
           {device} - Device name
           {type} - Build type
     -->
+    <string name="verification_failed_notification">سەڵماندن سەرنەکەوت</string>
+    <string name="verifying_download_notification">سەڵماندنی نوێکاری</string>
+    <string name="downloading_notification">دادەگیرێ</string>
+    <string name="download_paused_notification">داگرتن ڕاگیرا</string>
+    <string name="download_paused_error_notification">کێشە لە داگرتن</string>
+    <string name="download_completed_notification">داگرتن تەواو بوو</string>
+    <string name="download_starting_notification">دەستپێکردنی داگرتن</string>
+    <string name="update_failed_notification">نوێکردنەوە سەرنەکەوت</string>
+    <string name="installation_suspended_notification">جێگیرکردن دواخرا</string>
+    <string name="new_updates_found_title">نوێکاری نوێ</string>
+    <string name="text_download_speed">%1$s, %2$s/چ</string>
+    <string name="pause_button">ڕاگرتن</string>
+    <string name="resume_button">دەسپێکردنەوە</string>
+    <string name="suspend_button">دواخستن</string>
+    <string name="installing_update">جێگیرکردنی پاکێجی نوێکردنەوە</string>
+    <string name="installing_update_error">هەڵە لە جێگیرکردن</string>
+    <string name="installing_update_finished">نوێکاری جێگیرکرا</string>
+    <string name="finalizing_package">تەواوکردنی پاکێجی جێگیرکردن</string>
+    <string name="preparing_ota_first_boot">ئامادکردن بۆ یەکەم هەڵبوون</string>
+    <string name="dialog_prepare_zip_message">ئامادەکردنی سەرەتایی نوێکاری</string>
+    <string name="dialog_battery_low_title">پاتری کەمە</string>
+    <string name="dialog_battery_low_message_pct">ڕێژەی پاتری زۆر کەمە، پێویستە لانی کەم ڕێژەی<xliff:g id="percent_discharging">%1$d</xliff:g>%% پاتریت هەبێ بۆ بەردەوامی, <xliff:g id="percent_charging">%2$d</xliff:g>%% لەکاتی بارگاویبوونەوە.</string>
+    <string name="reboot">هەڵکردنەوە</string>
+    <string name="menu_refresh">تازەکردنەوە</string>
+    <string name="menu_preferences">هەڵبژاردەکان</string>
+    <string name="menu_auto_updates_check">پشکنینی خۆکاری نوێکاری</string>
+    <string name="menu_auto_updates_check_interval_daily">ڕۆژی جارێ</string>
+    <string name="menu_auto_updates_check_interval_weekly">هەفتەی جارێ</string>
+    <string name="menu_auto_updates_check_interval_monthly">مانگی جارێ</string>
+    <string name="menu_auto_updates_check_interval_never">هەرگیز</string>
+    <string name="menu_auto_delete_updates">سڕینەوەی نوێکارییەکان دوای جێگیربوون</string>
+    <string name="menu_delete_update">سڕینەوە</string>
+    <string name="menu_remove_update">سڕینەوە لە لیست</string>
+    <string name="menu_copy_url">لەبەرگرتنی URL</string>
+    <string name="menu_export_update">دەرهێنانی نوێکاری</string>
+    <string name="menu_show_changelog">پیشاندانی گۆڕانکارییەکان</string>
+    <string name="menu_local_update">هەڵبژاردنی فایل ...</string>
+    <string name="snack_updates_found">نوێکاری نوێ دۆزرایەوە</string>
+    <string name="snack_no_updates_found">نوێکاری نوێ نەدۆزرایەوە</string>
+    <string name="snack_updates_check_failed">پشکنینی نوێکارییەکە سەرنەکەوت. تکایە هێڵی ئینتەرنێتەکەت بپشکنە و پاشان هەوڵبدەرەوە.</string>
+    <string name="snack_download_failed">داگرتن شکستی هێنا. تکایە هێڵی ئینتەرنێتەکەت بپشکنە و پاشان هەوڵ بدەرەوە.</string>
+    <string name="snack_download_verification_failed">سەڵماندنی نوێکارییەکە شکستی هێنا.</string>
+    <string name="snack_download_verified">داگرتن تەواو بوو.</string>
+    <string name="snack_update_not_installable">ئەم نوێکارییە ناتوانرێ جێگیربکرێ لەسەر بنیاتی ئێستات.</string>
+    <string name="header_title_text">AICP\n%1$s</string>
+    <string name="header_android_version">ئەندرۆید <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">کۆتا پشکنین: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">AICP <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">AICP <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">سەڵماندنی نوێکاری</string>
+    <string name="list_no_updates">نوێکاری نوێ نەدۆزراوە. بۆ پشکنینی خۆکردی بۆ نوێکاری نوێ، دوگمەی تازەکردنەوە داگرە (تیرە خڕەکە).</string>
+    <string name="action_download">داگرتن</string>
+    <string name="action_pause">ڕاگرتن</string>
+    <string name="action_resume">دەسپێکردنەوە</string>
+    <string name="action_install">جێگیرکردن</string>
+    <string name="action_info">زانیاری</string>
+    <string name="action_delete">سڕینەوە</string>
+    <string name="action_cancel">پاشگەزبوون</string>
+    <string name="confirm_delete_dialog_title">سڕینەوەی فایل</string>
+    <string name="confirm_delete_dialog_message">فایلی دیاریکراوی نوێکاری بسڕێتەوە؟</string>
+    <string name="confirm_remove_dialog_title">سڕینەوە لە لیستەکە</string>
+    <string name="confirm_remove_dialog_message">نوێکاری دیارکراو لە لیستەکە بسڕدرێتەوە؟</string>
+    <string name="apply_update_dialog_title">لێدانی نوێکاری</string>
+    <string name="apply_update_dialog_message">تۆ خەریکی بەرزکردنەوەیت بۆ <xliff:g id="update_name">%1$s</xliff:g>.\n\nگەر بێتو <xliff:g id="ok">%2$s</xliff:g>دابگری، مۆبایلەکە خۆی دەچێتە ڕیکەڤەری بۆ دامەزرانی نوێکارییەکە.\n\nتێبینی: ئەم تایبەتمەندییە پێویستی بەوەیە کە دۆخی ڕیکەڤەری بەباشی دامەزرابێت لە ئامێرەکەتدا.</string>
+    <string name="apply_update_dialog_message_ab">تۆ خەریکی بەرزکردنەوەیت بۆ <xliff:g id="update_name">%1$s</xliff:g>.\n\nگەر بێتو <xliff:g id="ok">%2$s</xliff:g>داگری، مۆبایلەکە لە پاشبنەما نوێکاری دادەمەزرێنێ.\n\nکاتێ تەواو ئەبێت، پرست پێ دەکرێ بۆ هەڵکردنەوە.</string>
+    <string name="cancel_installation_dialog_message">هەڵوەشاندنەوەی جێگیرکردن؟</string>
+    <string name="label_download_url">داگرتنی URL</string>
+    <string name="toast_download_url_copied">URL لەبەرگیرا</string>
+    <string name="dialog_export_title">نوێکاری دەردەهێنرێ</string>
+    <string name="notification_export_success">نوێکاری دەرهێنرا</string>
+    <string name="notification_export_fail">هەڵە لە دەرهێنان</string>
+    <string name="toast_already_exporting">پێشتر نوێکارییەک دەرهێنراوە</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">1 چرکە ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> چرکە ماوە</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 خولەک ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> خولەک ماوە</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 کاژمێر ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> کاژمێر ماوە</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">ووریابە</string>
+    <string name="update_on_mobile_data_message">تۆ خەریکیت نوێکارییەک دادەبەزێنیت لەڕێی داتای مۆبایلەکەتەوە کە ئەمەش ڕێژەیەکی بەرزی داتاکەت بەکاردەبات. دەتەوێ بەردەوامبیت؟</string>
+    <string name="checkbox_mobile_data_warning">پیشان نەدرێتەوە</string>
+    <string name="menu_mobile_data_warning">ووریاکەری مۆبایل داتا</string>
+    <string name="blocked_update_dialog_title">نوێکردنەوە ڕاگیراوە</string>
+    <string name="blocked_update_dialog_message">ئەم نوێکارییە ناتوانرێ جێگیرکرێ لەسەر ئەم ئەپی نوێگەرییە.<xliff:g id="info_txt" translatable="false">%1$s</xliff:g></string>
+    <string name="blocked_update_info_txt">تکایە ئەو بابەتی XDA بخوێنەوە کەدەکرێتەوە لەبارەی ئامێرەکەتەوە بۆ زانیاری وەرگرتنی زیاتر.</string>
+    <string name="export_channel_title">بەجێگەیاندنی دەرهێنان</string>
+    <string name="new_updates_channel_title">نوێکاری نوێ</string>
+    <string name="ongoing_channel_title">داگرتنە چالاکەکان</string>
+    <string name="update_failed_channel_title">نوێکردنەوە سەرنەکەوت</string>
     <string name="dialog_permissions_title">مۆڵەتەکان</string>
     <string name="dialog_permissions_dismiss">لابردن</string>
     <string name="dialog_permissions_ask">دووبارە پرسین</string>
