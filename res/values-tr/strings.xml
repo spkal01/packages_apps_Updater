@@ -114,4 +114,7 @@
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
     <string name="ongoing_channel_title">Devam eden indirmeler</string>
     <string name="update_failed_channel_title">Güncelleme başarısız oldu</string>
+    <string name="dialog_permissions_title">İzinler</string>
+    <string name="dialog_permissions_dismiss">Reddet</string>
+    <string name="dialog_permissions_ask">Tekrar sor</string>
 </resources>

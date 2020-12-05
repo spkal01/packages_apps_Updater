@@ -111,4 +111,7 @@
     <string name="new_updates_channel_title">新しいアップデート</string>
     <string name="ongoing_channel_title">実行中のダウンロード</string>
     <string name="update_failed_channel_title">アップデートに失敗しました</string>
+    <string name="dialog_permissions_title">権限</string>
+    <string name="dialog_permissions_dismiss">解除</string>
+    <string name="dialog_permissions_ask">次回も確認する</string>
 </resources>

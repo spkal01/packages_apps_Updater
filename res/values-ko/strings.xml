@@ -111,4 +111,7 @@
     <string name="new_updates_channel_title">새로운 업데이트</string>
     <string name="ongoing_channel_title">진행 중인 다운로드</string>
     <string name="update_failed_channel_title">업데이트 실패!</string>
+    <string name="dialog_permissions_title">사용 권한</string>
+    <string name="dialog_permissions_dismiss">지우기</string>
+    <string name="dialog_permissions_ask">다시 묻기</string>
 </resources>
